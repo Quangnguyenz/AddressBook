@@ -15,7 +15,7 @@ namespace AddressBook.Services
             if (fileData is null) return string.Empty;
 
             string imageBase64Data = Convert.ToBase64String(fileData);
-            return $"data{extension};base64,{imageBase64Data}";
+            return $"data:{extension};base64,{imageBase64Data}";
         }
 
         public async Task<byte[]> ConvertFileToByteArrayAsync(IFormFile file)
